@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+
+  vars_prompt:
+    - name: "Name"
+      prompt: "Enter your name"
+    - name: "Age"
+      prompt: "Enter your age"
+
+  tasks:
+  - name: Print prompt var
+    debug:
+      msg: "{{ Name }}"
+
+  - name: Printing age 
+    debug:
+      msg: "{{ Age }}"
